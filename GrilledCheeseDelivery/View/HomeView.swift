@@ -20,6 +20,8 @@ struct HomeView: View {
             
             ScrollView {
                 
+                StickyView(firstMinY: $firstMinY, minY: $minY, lastMinY: $lastMinY, scale: $scale)
+                
                 VStack(alignment: .leading, spacing: 15, content: {
                     Section(header: Text("BREAD")
                         .font(.title)

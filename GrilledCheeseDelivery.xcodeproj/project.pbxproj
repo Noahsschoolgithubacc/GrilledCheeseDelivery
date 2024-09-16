@@ -13,6 +13,7 @@
 		72BC305C2C98A09D0064CB61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BC305B2C98A09D0064CB61 /* Preview Assets.xcassets */; };
 		72BC30662C98A53A0064CB61 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC30652C98A53A0064CB61 /* HeaderView.swift */; };
 		72BC30682C98ABE30064CB61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC30672C98ABE30064CB61 /* HomeView.swift */; };
+		72BC306A2C98BDEB0064CB61 /* StickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC30692C98BDEB0064CB61 /* StickyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		72BC305B2C98A09D0064CB61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72BC30652C98A53A0064CB61 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		72BC30672C98ABE30064CB61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72BC30692C98BDEB0064CB61 /* StickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				72BC30562C98A09C0064CB61 /* ContentView.swift */,
 				72BC30652C98A53A0064CB61 /* HeaderView.swift */,
 				72BC30672C98ABE30064CB61 /* HomeView.swift */,
+				72BC30692C98BDEB0064CB61 /* StickyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72BC30572C98A09C0064CB61 /* ContentView.swift in Sources */,
+				72BC306A2C98BDEB0064CB61 /* StickyView.swift in Sources */,
 				72BC30682C98ABE30064CB61 /* HomeView.swift in Sources */,
 				72BC30662C98A53A0064CB61 /* HeaderView.swift in Sources */,
 				72BC30552C98A09C0064CB61 /* GrilledCheeseDeliveryApp.swift in Sources */,
