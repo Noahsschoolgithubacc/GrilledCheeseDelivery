@@ -41,8 +41,104 @@ struct StickyView: View {
                 }
                 self.scale = scale
             }
-            return AnyView(Image("bread"))
+            return AnyView(
+            Image("bread")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: getScreen().width, height: getScreen().height - firstMinY)
+                .cornerRadius(1)
+                .scaleEffect(scale < 0.6 ? imageScale: 1)
+                .offset(y: scale < 0.3 ? imageOffSet: 0)
+                .overlay(
+                    
+                    ZStack {
+                        
+                        VStack {
+                            Text("BREAD")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .opacity(0.7)
+                            
+                            Text("It is bread indeed")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .opacity(0.7)
+                                .padding()
+                        }
+                        .foregroundColor(.white)
+                        .offset(y: 15)
+                        .opacity(Double(scale - 0.7 / 0.3))
+                        
+                        Text("Bread")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .opacity(0.8)
+                            .scaleEffect(1.6)
+                            .opacity(0.1 - Double(scale - 0.7) / 0.3)
+                    }
+                )
+            // used to overlay added content when scale < 0.6
+                .background(
+                    
+                    // overlays a roundedrectangle with colorthree when scale is less then 0.6
+                    ZStack {
+                        if scale < 0.6 {
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(Color("colorthree"))
+                            
+                            
+                            // displays circles when scale < 0.6
+                            VStack {
+                                
+                                HStack {
+                                    
+                                    // pushes our circles to the right edge
+                                    Spacer()
+                                    
+                                    // displays our three circles
+                                    ForEach(1...3, id: \.self) { _ in
+                                    Circle()
+                                            .fill(Color.gray)
+                                            .frame(width: 15, height: 15)
+                                    }
+                                }
+                                Spacer()
+                            }
+                        }
+                    }
+                )
+            // applies vertical offset based on minY and lastMinY to ensure proper position/pos
+                .scaleEffect(scale > 0.6 ? scale: 0.6)
+                .offset(y: minY > 0 ? minY > lastMinY + 60 && lastMinY != 0 ? lastMinY + 60 : minY : 0)
+                .offset(y: scale > 0.6 ? (scale - 1) * 200 : -80)
+            )
         }
+        .frame(width: getScreen().width, height: getScreen().height - firstMinY)
+        
+        .overlay(
+            VStack {
+                Text("Swipe up to order")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                
+                Button(action: {
+                    showInfoModalView = true
+                }, label: {
+                    Label("Order", systemImage: "")
+                        .background(Color.white)
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                        .padding()
+                        .border(Color.white, width: 16)
+                })
+                .padding()
+            }
+        )
     }
 }
 
