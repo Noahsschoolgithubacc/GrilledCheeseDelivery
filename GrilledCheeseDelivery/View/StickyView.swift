@@ -42,7 +42,7 @@ struct StickyView: View {
                 self.scale = scale
             }
             return AnyView(
-            Image("bread")
+            Image("bread2")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: getScreen().width, height: getScreen().height - firstMinY)
@@ -138,6 +138,11 @@ struct StickyView: View {
                 })
                 .padding()
             }
+            // presents the order form as a modal sheet
+                .sheet(isPresented: $showInfoModalView) {
+                    OrderForm()
+                }
+                .offset(y: minY > 0 ? minY > lastMinY + 60 && lastMinY != 0 ? lastMinY + 60 : minY : 0), alignment: .bottom
         )
     }
 }

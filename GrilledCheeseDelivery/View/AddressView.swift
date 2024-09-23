@@ -12,26 +12,24 @@ struct AddressView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        NavigationView {
-            Form {
+        Form {
+            
+            Section {
                 
-                Section {
-                    
-                    TextField("Name", text: $order.name)
-                    TextField("Street Address", text: $order.streetAddress)
-                    TextField("City", text: $order.city)
-                    TextField("Zip", text: $order.zipCode)
-                    TextField("Phone Number", text: $order.cellPhoneNumber)
-                }
-                
-                Section {
-                    NavigationLink(destination: CheckoutView(order: order)) {
-                        Text("Checkout")
-                    }
+                TextField("Name", text: $order.name)
+                TextField("Street Address", text: $order.streetAddress)
+                TextField("City", text: $order.city)
+                TextField("Zip", text: $order.zipCode)
+                TextField("Phone Number", text: $order.cellPhoneNumber)
+            }
+            
+            Section {
+                NavigationLink(destination: CheckoutView(order: order)) {
+                    Text("Checkout")
                 }
             }
-            .navigationBarTitle("Delivery details", displayMode: .inline)
         }
+        .navigationBarTitle("Delivery details", displayMode: .inline)
     }
 }
 
