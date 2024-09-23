@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7289D32D2CA1DC5600BFAE66 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7289D32C2CA1DC5600BFAE66 /* AddressView.swift */; };
+		7289D32F2CA1DD9200BFAE66 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7289D32E2CA1DD9200BFAE66 /* CheckoutView.swift */; };
 		729CDFA72C9CA5C400DFB498 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CDFA62C9CA5C400DFB498 /* Order.swift */; };
 		729CDFA92C9CAE7100DFB498 /* OrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CDFA82C9CAE7100DFB498 /* OrderForm.swift */; };
 		72BC30552C98A09C0064CB61 /* GrilledCheeseDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BC30542C98A09C0064CB61 /* GrilledCheeseDeliveryApp.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		7289D32C2CA1DC5600BFAE66 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		7289D32E2CA1DD9200BFAE66 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		729CDFA62C9CA5C400DFB498 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		729CDFA82C9CAE7100DFB498 /* OrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderForm.swift; sourceTree = "<group>"; };
 		72BC30512C98A09C0064CB61 /* GrilledCheeseDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrilledCheeseDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 				72BC30692C98BDEB0064CB61 /* StickyView.swift */,
 				729CDFA82C9CAE7100DFB498 /* OrderForm.swift */,
 				7289D32C2CA1DC5600BFAE66 /* AddressView.swift */,
+				7289D32E2CA1DD9200BFAE66 /* CheckoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				7289D32D2CA1DC5600BFAE66 /* AddressView.swift in Sources */,
 				729CDFA92C9CAE7100DFB498 /* OrderForm.swift in Sources */,
 				72BC30552C98A09C0064CB61 /* GrilledCheeseDeliveryApp.swift in Sources */,
+				7289D32F2CA1DD9200BFAE66 /* CheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
