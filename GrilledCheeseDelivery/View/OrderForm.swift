@@ -48,7 +48,13 @@ struct OrderForm: View {
                         }
                     }
                 }
+                Section {
+                    NavigationLink(destination: AddressView(order: order)) {
+                        Text("Delivery details")
+                    }
+                }
             }
+            .navigationTitle("Bread delivery")
         }
     }
 }
